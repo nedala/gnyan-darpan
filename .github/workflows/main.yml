@@ -1,0 +1,23 @@
+name: Deploy to Namecheap Web Hosting
+
+on:
+  push:
+    branches:
+      - main # Adjust the branch name if necessary
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Namecheap
+        uses: w3as/ftp-action@v1
+        with:
+          server: sftp://your-ftp-server.com:21098 # Specify the custom port
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          source: ./ # Use the root directory as the source
+          remotePath: /public_html # Change this to your preferred remote path
