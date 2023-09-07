@@ -22,5 +22,5 @@ jobs:
         username: ${{ secrets.SFTP_USERNAME }}
         password: ${{ secrets.SFTP_PASSWORD }}
         port: 21098 
-        source: ./
-        target: /public_html
+        local-dir: ./
+        server-dir: /public_html
