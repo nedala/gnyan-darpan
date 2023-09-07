@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to Namecheap
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: sftp://162.213.251.104:21098 # Specify the custom port
+          server: sftp://premium105.web-hosting.com:21098 # Specify the custom port
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           source: ./ # Use the root directory as the source
