@@ -1,28 +1,26 @@
-name: Deploy to Namecheap Web Hosting
+name: Deploy to Namecheap Web Hosting 
 
 on:
   push:
     branches:
-      - main # Adjust the branch name if necessary
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16 # Use Node.js version 16
-          
-      - name: Deploy to Namecheap
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: sftp://premium105.web-hosting.com:21098 # Specify the custom port
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          source: ./ # Use the root directory as the source
-          target: /public_html # Change this to your preferred remote path
+    - uses: actions/checkout@v2
+      
+    - uses: actions/setup-node@v2
+      with: 
+        node-version: 16
+        
+    - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: premium105.web-hosting.com
+        username: ${{ secrets.SFTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        port: 21098 
+        source: ./
+        target: /public_html
