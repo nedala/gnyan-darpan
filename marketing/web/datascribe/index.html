@@ -405,7 +405,6 @@
 		}
 
 		.bee-row-8 .bee-col-2 .bee-block-2 {
-			padding-right: 20px;
 			width: 100%
 		}
 
@@ -506,6 +505,10 @@
 			color: #34495e
 		}
 
+		.bee-desktop_hide {
+			display: none;
+		}
+		
 		@media (max-width:768px) {
 			.bee-form form {
 				width: 100% !important
@@ -534,6 +537,10 @@
 			.bee-menu ul.with-bee-hamburger span,
 			.bee-mobile_hide {
 				display: none
+			}
+
+			.bee-desktop_hide {
+				display: block;
 			}
 
 			#bee-hamburger-memu-r1c1m0:checked~ul,
@@ -885,7 +892,7 @@
 		</div>
 		<div class="bee-row bee-row-9">
 			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w6">
+				<div class="bee-col bee-col-1 bee-col-w6 bee-mobile_hide">
 					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="./images/2.png" style="max-width:602px; border-radius: 5%;" /></div>
 					<div class="bee-block bee-block-2 bee-divider">
 						<div class="spacer" style="height:15px;"></div>
@@ -911,6 +918,12 @@
 						<p style="word-break:break-word;"><span>Unlock the power of advanced language models with our cutting-edge LLM configuration feature. Tailor your experience by choosing from industry-leading models like OpenAI or leverage the flexibility of custom LLMs through Ollama. Our user-friendly interface empowers you to effortlessly configure your preferred language model, ensuring that your cataloging experience is tailored to your specific needs. Whether you require natural language processing, text generation, or any other advanced language capabilities, our application delivers a seamless and efficient solution. Unleash the full potential of language models and elevate your cataloging experience to new heights.</span></p>
 					</div>
 					<div class="bee-block bee-block-7 bee-button" style="display: none;"><a class="bee-button-content" href="www.example.com" style="font-size: 15px; background-color: #7273f1; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 40px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; max-width: 100%; padding-bottom: 5px; padding-left: 25px; padding-right: 25px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 15px; line-height: 200%;"><span style="font-size: 15px;">Learn More</span></span></a></div>
+				</div>
+				<div class="bee-col bee-col-1 bee-col-w6 bee-desktop_hide">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="./images/2.png" style="max-width:602px; border-radius: 5%;" /></div>
+					<div class="bee-block bee-block-2 bee-divider">
+						<div class="spacer" style="height:15px;"></div>
+					</div>
 				</div>
 			</div>
 		</div>
