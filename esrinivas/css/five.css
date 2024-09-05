@@ -348,9 +348,11 @@ header {
     -o-background-size: cover;
 }
 
-header .intro-text {
-    padding-top: 100px;
+header .container .intro-text {
+    padding-top: 400px;
     padding-bottom: 50px;
+    bottom: 100px;
+    text-align: center;
 }
 
 header .container .intro-text .intro-lead-in {
