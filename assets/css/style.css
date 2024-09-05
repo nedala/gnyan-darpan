@@ -415,7 +415,6 @@ h6 {
   background: url(../img/hero-bg.jpg) center top no-repeat;
   background-size: cover;
   position: relative;
-  cursor: none; /* Hide the default cursor */
 }
 
 @media (min-width: 1024px) {
