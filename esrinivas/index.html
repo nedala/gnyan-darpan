@@ -740,7 +740,30 @@
                     }
                 });
             </script>
+            <script>
+                // When a modal is opened, push a new state to the history
+                $('.modal').on('shown.bs.modal', function () {
+                    var modalId = $(this).attr('id');
+                    // Push a new state to the history with the modal ID
+                    history.pushState({ modalOpen: true }, null, "#" + modalId);
+                });
 
+                // When the back button is pressed, close the modal if a modal is open
+                window.addEventListener('popstate', function (event) {
+                    if (event.state && event.state.modalOpen) {
+                        // If the state indicates a modal is open, close all modals
+                        $('.modal').modal('hide');
+                    }
+                });
+
+                // Also, when the modal is closed, we need to go back in history
+                $('.modal').on('hidden.bs.modal', function () {
+                    // Go back one step in the history
+                    if (window.history.state && window.history.state.modalOpen) {
+                        history.back();
+                    }
+                });
+            </script>
 </body>
 
 </html>
