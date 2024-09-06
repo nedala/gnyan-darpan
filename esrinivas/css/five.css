@@ -70,6 +70,10 @@ a {
     *color: #fed136;
 }
 
+.left {
+    text-align: left;
+  }
+
 a:hover,
 a:focus,
 a:active,
@@ -333,6 +337,10 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+}
+
+.imgborder {
+    border: 1px solid #ccc;
 }
 
 header {
